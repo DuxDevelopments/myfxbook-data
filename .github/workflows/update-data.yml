@@ -1,0 +1,30 @@
+name: Update MyFxBook Data
+on:
+  schedule:
+    - cron: '0 * * * *'
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          
+      - name: Install dependencies
+        run: npm install puppeteer
+          
+      - name: Scrape MyFxBook Data
+        run: node scrape.js
+          
+      - name: Commit updated data
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add data.json
+          git commit -m "🤖 Hourly MyFxBook update: $(date)" || exit 0
+          git push
