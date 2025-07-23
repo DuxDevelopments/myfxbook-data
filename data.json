@@ -1,0 +1,41 @@
+{
+  "balance": 0,
+  "equity": 0,
+  "monthlyGain": 0,
+  "absoluteGain": 0,
+  "dailyAverage": 0,
+  "drawdown": 0,
+  "winRate": 0,
+  "totalTrades": 0,
+  "profit": 0,
+  "interest": 0,
+  "periods": {
+    "today": {
+      "gain": 0,
+      "profit": 0,
+      "winRate": 0,
+      "trades": 0
+    },
+    "thisWeek": {
+      "gain": 0,
+      "profit": 0,
+      "winRate": 0,
+      "trades": 0
+    },
+    "thisMonth": {
+      "gain": 0,
+      "profit": 0,
+      "winRate": 0,
+      "trades": 0
+    },
+    "thisYear": {
+      "gain": 0,
+      "profit": 0,
+      "winRate": 0,
+      "trades": 0
+    }
+  },
+  "lastUpdated": "2025-07-23T01:06:35.494Z",
+  "source": "MyFxBook",
+  "accountId": "11614021"
+}
