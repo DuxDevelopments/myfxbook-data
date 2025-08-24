@@ -1,41 +1,41 @@
 {
-  "balance": 109172.96,
-  "equity": 108754.28,
-  "monthlyGain": 9.04,
-  "absoluteGain": 9.17,
-  "dailyAverage": 0.72,
-  "drawdown": 8.21,
-  "winRate": 65,
-  "totalTrades": 388,
-  "profit": 9172.96,
-  "interest": -259.08,
+  "balance": 0,
+  "equity": 0,
+  "monthlyGain": 0,
+  "absoluteGain": 0,
+  "dailyAverage": 0,
+  "drawdown": 0,
+  "winRate": 0,
+  "totalTrades": 0,
+  "profit": 0,
+  "interest": 0,
   "periods": {
     "today": {
-      "gain": 0.89,
-      "profit": 961.04,
-      "winRate": 68,
-      "trades": 50
+      "gain": 0,
+      "profit": 0,
+      "winRate": 0,
+      "trades": 0
     },
     "thisWeek": {
-      "gain": 6.53,
-      "profit": 6692.99,
-      "winRate": 69,
-      "trades": 199
+      "gain": 0,
+      "profit": 0,
+      "winRate": 0,
+      "trades": 0
     },
     "thisMonth": {
-      "gain": 9.17,
-      "profit": 9172.96,
-      "winRate": 65,
-      "trades": 388
+      "gain": 0,
+      "profit": 0,
+      "winRate": 0,
+      "trades": 0
     },
     "thisYear": {
-      "gain": 9.17,
-      "profit": 9172.96,
-      "winRate": 65,
-      "trades": 388
+      "gain": 0,
+      "profit": 0,
+      "winRate": 0,
+      "trades": 0
     }
   },
-  "lastUpdated": "2025-08-24T05:27:09.534Z",
-  "source": "Fallback",
-  "error": "Navigation timeout of 30000 ms exceeded"
+  "lastUpdated": "2025-08-24T06:36:44.565Z",
+  "source": "MyFxBook",
+  "accountId": "11614021"
 }
