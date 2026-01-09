@@ -1,30 +1,42 @@
-name: Update MyFxBook Data
+name: Hourly MyFxBook Update
+
 on:
   schedule:
-    - cron: '0 * * * *'
+    - cron: "0 * * * *"   # every hour
   workflow_dispatch:
+
+concurrency:
+  group: myfxbook-update
+  cancel-in-progress: false
 
 jobs:
   update:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
-      
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - name: Checkout repository
+        uses: actions/checkout@v4
         with:
-          node-version: '18'
-          
-      - name: Install dependencies
-        run: npm install puppeteer
-          
-      - name: Scrape MyFxBook Data
-        run: node scrape.js
-          
-      - name: Commit updated data
+          fetch-depth: 0   # REQUIRED for rebase
+
+      - name: Update data.json
+        run: |
+          # your script that updates data.json goes here
+          echo "update happens here"
+
+      - name: Commit and push changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
+
           git add data.json
-          git commit -m "🤖 Hourly MyFxBook update: $(date)" || exit 0
+
+          # Exit cleanly if nothing changed
+          git diff --cached --quiet && exit 0
+
+          git commit -m "🤖 Hourly MyFxBook update: $(date -u)"
+
+          # Rebase on latest main to avoid push rejection
+          git pull --rebase origin main
+
           git push
