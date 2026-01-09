@@ -12,7 +12,7 @@ const fs = require('fs');
   const page = await browser.newPage();
   
   try {
-    await page.goto('https://www.myfxbook.com/members/MechForex/mechforex-20/11614021', {
+    await page.goto('https://www.myfxbook.com/members/MechForex/mechforex-v2/11781810', {
       waitUntil: 'networkidle2',
       timeout: 30000
     });
